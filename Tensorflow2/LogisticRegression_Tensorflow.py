@@ -6,7 +6,7 @@ model = tf.keras.models.Sequential([
   tf.keras.layers.Dense(1, activation='sigmoid'),
 ])
 
-# Loss function은 MSE, optimizer는 SGD, LR은 0.003
+# Loss function은 BCE, optimizer는 SGD, LR은 0.003
 sgd = tf.keras.optimizers.SGD(learning_rate=0.003)
 model.compile(optimizer=sgd,
               loss='binary_crossentropy',
