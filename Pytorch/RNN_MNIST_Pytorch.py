@@ -25,6 +25,12 @@ test_Y = torch.FloatTensor(test[:, :1]).to(device)
 train_X = torch.reshape(train_X, (len(train_X), 28, 28))
 test_X = torch.reshape(test_X, (len(test_X), 28, 28))
 
+# hyperparameters
+input_size = 28
+hidden_size = 128
+num_layers = 1
+num_classes = 10 
+
 class RNN(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, num_classes):
         super(RNN, self).__init__()
